@@ -26,6 +26,7 @@ word_list = read_into_list()
 alpha_word_list = remove_characters(word_list)
 unique_words = set(alpha_word_list)
 print(len(unique_words))
+print("" in unique_words)
 
 #calculate time used to run the python script
 net_Time = time() - start_Time
