@@ -12,9 +12,17 @@ def read_into_list():
             words = line.split()
             everyword += words
             number_of_words += len(words)
-    print("There are a total of {:d}".format(number_of_words))
+    print("There are a total of {:d} words".format(number_of_words))
+    return everyword
 
-read_into_list()
+def remove_characters(word_list):
+    """This function remove all non-alphabetical characters of the given word list"""
+    for word in word_list:
+        word = "".join(char for char in word if char.isalpha())
+    return word_list
+
+word_list = read_into_list()
+alpha_word_list = remove_characters(word_list)
 
 #calculate time used to run the python script
 net_Time = time() - start_Time
